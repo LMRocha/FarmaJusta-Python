@@ -1,0 +1,70 @@
+#coding: utf-8
+<Auth>:
+    name: 'auth'
+    BoxLayout:
+
+        orientation: "vertical"
+
+        TextInput:
+            id: usr
+            hint_text: "Usr"
+
+
+        TextInput:
+            id: pwd
+            hint_text: "Pwd"
+
+
+        Button:
+            id: btn_logar
+            text: "Autenticar"
+            on_press: root.clica_logar()
+
+        Button:
+            id: btn_cadastrar
+            text: "Cadastre - se"
+
+
+
+
+<ConsultaRegistro>:
+
+    name: 'consulta_grem'
+
+    BoxLayout:
+
+        orientation: "vertical"
+
+        TextInput:
+            id: vlr_medicamento
+            hint_text: "VALOR DO MEDICAMENTO"
+
+        TextInput:
+            id: num_germ
+            hint_text: "REGISTRO (COD BARRAS)"
+
+        Button:
+            text: "Consultar"
+            id: btn_consultar
+            on_press: root.clicar_consultar()
+
+        Button:
+            text: "Encerrar"
+            id: btn_encerrar
+            on_press: root.clica_encerrar()
+
+<VisualizacaoConsulta>:
+
+    name: 'visualizar_consulta'
+    on_enter: root.popula_campos()
+
+    BoxLayout:
+        orientation: "vertical"
+
+        Label:
+            id: label_resultado
+
+        Button:
+            id: btn_denunciar
+            text: "Denunciar"
+
